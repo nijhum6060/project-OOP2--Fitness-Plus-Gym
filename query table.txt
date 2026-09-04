@@ -1,0 +1,49 @@
+CREATE TABLE newStaff
+(
+ Id INT IDENTITY(1,1) PRIMARY KEY,
+ Fname VARCHAR(50),
+ Lname VARCHAR(50),
+ Gender VARCHAR(10),
+ Dob DATE,
+ Mobile BIGINT,
+ Email VARCHAR(100),
+ JoinDate DATE,
+ address VARCHAR(200)
+);
+
+CREATE TABLE newMember
+(
+ Id INT IDENTITY(1,1) PRIMARY KEY,
+ Fname VARCHAR(50),
+ Lname VARCHAR(50),
+ Gender VARCHAR(10),
+ Dob DATE,
+ Mobile BIGINT,
+ Email VARCHAR(100),
+ JoinDate DATE,
+ Gymtime VARCHAR(50),
+ Maddress VARCHAR(200),
+ MembershipTime VARCHAR(50)
+);
+
+CREATE TABLE Equipment
+(
+ Id INT IDENTITY(1,1) PRIMARY KEY,
+ equipName VARCHAR(100),
+ description VARCHAR(500),
+ MUsed VARCHAR(100),
+ DDate DATE,
+ Cost BIGINT
+);
+
+CREATE TABLE Payment
+(
+ Id INT IDENTITY(1,1) PRIMARY KEY,
+ MemberId INT,
+ MemberName VARCHAR(100),
+ PaymentType VARCHAR(50),
+ Amount BIGINT,
+ PaymentDate DATE,
+ PaymentMethod VARCHAR(50),
+ Status VARCHAR(20)
+);
